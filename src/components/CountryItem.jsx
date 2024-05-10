@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import LoadingIndicator from "./UI/LoadingIndicator";
 import { fetchCountry } from "../http";
+import Button from "./UI/Button";
 
 const CountryItem = ({ countryName }) => {
   const [country, setCountry] = useState(null);
@@ -52,7 +52,7 @@ const CountryItem = ({ countryName }) => {
           </dl>
         </div>
       )}
-      {!isLoading && <Link to="/countries" className="linkBtn text-xl">Back to list of countries</Link>}
+      {!isLoading && <Button url="/countries" className="text-xl">Back to list of countries</Button>}
     </>
   );
 };
